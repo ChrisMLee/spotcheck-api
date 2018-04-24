@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_04_21_232047) do
+ActiveRecord::Schema.define(version: 2018_04_23_004035) do
+
+  create_table "instagram_media", force: :cascade do |t|
+    t.string "link"
+    t.string "added_by"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "place_id"
+    t.index ["place_id"], name: "index_instagram_media_on_place_id"
+  end
 
   create_table "list_places", force: :cascade do |t|
     t.integer "place_id"
