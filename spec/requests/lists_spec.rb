@@ -1,10 +1,15 @@
 require 'rails_helper'
 
-RSpec.describe 'Lists API', type :request do
-  # add todos owner
+RSpec.describe 'Lists API', type: :request do
+  # add lists owner
   let(:user) {create(:user)}
-  let!(:lists) {create_list(:list, 10, created_by: user.id)}
-  let(:list_id) {lists.first.id}
+  let(:list){create(:list)}
+  let! user.lists << :list
+  factory(:user) do
+    after :create do
+       
+    end
+  end
 
   let(:headers) {valid_headers}
 
