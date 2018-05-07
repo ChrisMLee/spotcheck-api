@@ -1,4 +1,5 @@
 # Spotcheck API 
 
 ## Todos:
-[ ] - Write request specs 
+[ ] - Write request specs
+[ ] - Add "public/private" to maps
